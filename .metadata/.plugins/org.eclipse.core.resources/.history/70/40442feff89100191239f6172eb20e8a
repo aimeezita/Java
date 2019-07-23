@@ -1,0 +1,15 @@
+
+public class Fatoriais {
+ public static void main(String[] args) {
+	int numero;
+	
+	int fatorial;
+	
+	for(numero=1; numero>=1; numero++) {
+		System.out.println(fatorial = numero* (numero-=1));
+		
+	}
+	
+	 
+} 
+}
