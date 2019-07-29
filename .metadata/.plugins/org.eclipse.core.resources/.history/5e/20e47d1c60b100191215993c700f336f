@@ -1,0 +1,42 @@
+
+public class Cliente {
+private String nome;
+private String cpf;
+private String profissao;
+
+system.outprintln(Cliente.getTitular);
+
+//Métodos
+
+//Método para mostrar o nome
+public String getNome() {
+	return nome;
+}
+
+//Método para alterar o nome
+public void setNome(String nome) {
+	this.nome = nome;
+}
+
+//Método para mostrar CPF
+public String getCpf() {
+	return cpf;
+}
+
+//Método para alterar CPF
+public void setCpf(String cpf) {
+	this.cpf = cpf;
+}
+
+//Método para exibir profissão
+public String getProfissao() {
+	return profissao;
+}
+
+//Método para alterar profissão
+public void setProfissao(String profissao) {
+	this.profissao = profissao;
+
+}
+
+
