@@ -6,7 +6,20 @@ public class Conta {
 	    private int agencia;
 	    private int numero;
 	    private Cliente titular;
-
+	    //contador de contas criadas	
+	    private static int total; //static é para dizer que é da classe, e não do objeto.
+	    
+//Construtor
+	    public Conta (int agencia, int numero) {
+	    	Conta.total++;
+	    	
+	    	this.agencia = agencia;
+	    	this.numero = numero;
+	    	
+	    	System.out.println("Estou criando uma conta " + this.numero);
+	    	System.out.println("O total de contas é  " + total);
+	    }
+	    
 // Métodos
 
 	//Deposita
@@ -49,6 +62,10 @@ public boolean transfere(double valor, Conta destino) {
 	    }
 //Altera o número da conta
 	 public void setNumero(int novoNumero) { 
+		 if(numero <=0) {
+			 System.out.println("Não pode valor menor ou igual a 0");
+			 return;
+		 } else
 	        this.numero = novoNumero;
 	    }
 
@@ -59,6 +76,10 @@ public boolean transfere(double valor, Conta destino) {
 	 
 //Coloca ou altera o número da agência
 	 public void setAgencia(int agencia) {
+		 if(agencia <=0) {
+			 System.out.println("Não pode valor menor ou igual a 0");
+			 return;
+		 } else
 		this.agencia = agencia;
 	}
 // Define o titular da conta
@@ -71,4 +92,8 @@ public boolean transfere(double valor, Conta destino) {
 		 return this.titular;
 	 }
 
+//Devolve o total de contas criadas
+	 public static int getTotal() {
+		 return Conta.total;
+	 }
 }
